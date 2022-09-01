@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Chronomètre</title>
+    <link rel="stylesheet" href="css/style.css" />
+    <script
+      src="https://kit.fontawesome.com/00a1159749.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+  <body>
+    <h1>Chronomètre</h1>
+
+    <div class="toggle-container">
+      <p>Temps différé</p>
+      <input type="checkbox" class="checkbox" id="checkbox" />
+      <label for="checkbox" class="label">
+        <i class="fa-solid fa-check"></i>
+        <div class="ball"></div>
+      </label>
+    </div>
+
+    <div class="screens-container">
+      <div class="screens-screen screen1">
+        <p id="temps1">21,43</p>
+      </div>
+      <div class="screens-screen screen2 hidden" id="screen">
+        <p id="temps2">21,43</p>
+      </div>
+    </div>
+
+    <div class="buttons-container">
+      <button class="bg-secondary">Pause</button>
+      <button class="bg-primary">Départ</button>
+      <button class="bg-tertiary">Reset</button>
+      <button class="bg-primary" id="inter">Arrivée</button>
+      <span></span>
+      <button class="bg-primary hidden" id="finish">Arrivée</button>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
