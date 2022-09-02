@@ -11,7 +11,7 @@
       crossorigin="anonymous"
     ></script>
   </head>
-  <body>
+  <body onload="displayTempsDiff()">
     <h1>Chronomètre</h1>
 
     <div class="toggle-container">
@@ -25,20 +25,22 @@
 
     <div class="screens-container">
       <div class="screens-screen screen1">
-        <p id="temps1">21,43</p>
+        <p id="phase1"></p>
       </div>
       <div class="screens-screen screen2 hidden" id="screen">
-        <p id="temps2">21,43</p>
+        <p id="phase2"></p>
       </div>
     </div>
 
     <div class="buttons-container">
-      <button class="bg-secondary">Pause</button>
-      <button class="bg-primary">Départ</button>
-      <button class="bg-tertiary">Reset</button>
-      <button class="bg-primary" id="inter">Arrivée</button>
+      <button class="bg-secondary" id="pause" onclick="pause()">Pause</button>
+      <button class="bg-primary" id="start" onclick="start()">Départ</button>
+      <button class="bg-tertiary" onclick="reset()">Reset</button>
+      <button class="bg-primary" id="inter" onclick="inter()">Arrivée</button>
       <span></span>
-      <button class="bg-primary hidden" id="finish">Arrivée</button>
+      <button class="bg-primary hidden" id="finish" onclick="finish()">
+        Arrivée
+      </button>
     </div>
 
     <script src="./script.js"></script>
